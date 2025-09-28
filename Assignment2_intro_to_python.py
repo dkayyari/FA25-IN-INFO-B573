@@ -15,7 +15,7 @@ def read_sequence(filename):
 
 seq = read_sequence('chr1_GL383518v1_alt.fa')
 
-# 📌 Print specific letters from the sequence
+#  Print specific letters from the sequence
 print("\n🔹 10th letter of sequence:", seq[9])
 print("🔹 758th letter of sequence:", seq[757])
 
@@ -32,7 +32,7 @@ def reverse_complement(seq):
 
 rev_seq = reverse_complement(seq)
 
-# 📌 Print specific letters from reverse complement
+# Print specific letters from reverse complement
 print("\n🔹 79th letter of reverse complement:", rev_seq[78])
 print("🔹 500th to 800th letters of reverse complement:\n", rev_seq[499:800])
 
@@ -51,7 +51,7 @@ def count_by_kilobase(seq):
 
 my_dict = count_by_kilobase(seq)
 
-# 📌 Print example: counts for kilobase starting at position 5000
+#  Print example: counts for kilobase starting at position 5000
 print("\n🔹 Counts for kilobase starting at position 5000:")
 print("   ", my_dict.get(5000, {}))
 
@@ -107,18 +107,18 @@ for i, total in enumerate(sums):
 # Each kilobase (chunk of 1000 base pairs) is expected to contain exactly 1000 nucleotides.
 # However, some kilobases may have a total count less than 1000. This can happen due to:
 #
-# 1️⃣ Incomplete Final Chunk:
+# 1️. Incomplete Final Chunk:
 #     - If the total sequence length isn't a perfect multiple of 1000, the last kilobase will be shorter.
 #
-# 2️⃣ Non-standard Characters:
+# 2️. Non-standard Characters:
 #     - DNA sequences may include ambiguous bases like 'N', or symbols not part of A, C, G, T.
 #     - These characters are counted but may not be included in the A/C/G/T summary.
 #
-# 3️⃣ Case Sensitivity:
+# 3️. Case Sensitivity:
 #     - Although both uppercase and lowercase letters are handled, inconsistencies in input formatting
 #       could still affect counts if not properly normalized.
 #
-# 4️⃣ File Formatting Issues:
+# 4️. File Formatting Issues:
 #     - Unexpected line breaks, spaces, or hidden characters in the FASTA file could lead to miscounts.
 #
 # These factors explain why some kilobase sums may differ from the expected value of 1000.
