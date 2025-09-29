@@ -13,7 +13,7 @@ def read_sequence(filename):
     sequence = ''.join([line.strip() for line in lines if not line.startswith('>')])
     return sequence
 
-seq = read_sequence('chr1_GL383518v1_alt.fa')
+seq = read_sequence('chr1_GL383518v1_alt.fa')# Load DNA sequence from file
 
 #  Print specific letters from the sequence
 print("\n🔹 10th letter of sequence:", seq[9])
@@ -122,4 +122,10 @@ for i, total in enumerate(sums):
 #     - Unexpected line breaks, spaces, or hidden characters in the FASTA file could lead to miscounts.
 #
 # These factors explain why some kilobase sums may differ from the expected value of 1000.
+
+print("\n✅ Analysis complete.")
+
+
+
+
 
