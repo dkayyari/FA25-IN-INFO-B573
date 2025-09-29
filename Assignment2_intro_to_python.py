@@ -1,5 +1,5 @@
 
-# dna_analysis.py
+# Assignment2_intro_to_python.py
 # B573 Assignment 2 - DNA Sequence Analysis
 # Author: Deeksha Kayyari
 # Date: 09/28/2025
