@@ -16,8 +16,8 @@ def read_sequence(filename):
 seq = read_sequence('chr1_GL383518v1_alt.fa')# Load DNA sequence from file
 
 #  Print specific letters from the sequence
-print("\n🔹 10th letter of sequence:", seq[9])
-print("🔹 758th letter of sequence:", seq[757])
+print("\n 1a. 10th letter of sequence:", seq[9])
+print("\n 1a. 758th letter of sequence:", seq[757])
 
 # -----------------------------------------------
 # Step 2: Create the reverse complement sequence
@@ -33,8 +33,8 @@ def reverse_complement(seq):
 rev_seq = reverse_complement(seq)
 
 # Print specific letters from reverse complement
-print("\n🔹 79th letter of reverse complement:", rev_seq[78])
-print("🔹 500th to 800th letters of reverse complement:\n", rev_seq[499:800])
+print("\n 2a.79th letter of reverse complement:", rev_seq[78])
+print("\n 2b.500th to 800th letters of reverse complement:\n", rev_seq[499:800])
 
 # ------------------------------------------------------------
 # Step 3: Create nested dictionary of nucleotide frequencies
@@ -52,7 +52,7 @@ def count_by_kilobase(seq):
 my_dict = count_by_kilobase(seq)
 
 #  Print example: counts for kilobase starting at position 5000
-print("\n🔹 Counts for kilobase starting at position 5000:")
+print("\n 3a. Counts for kilobase starting at position 5000:")
 print("   ", my_dict.get(5000, {}))
 
 # ------------------------------------------------------------------
@@ -65,7 +65,7 @@ first_list = [
     first_kb.get('G', 0) + first_kb.get('g', 0),
     first_kb.get('T', 0) + first_kb.get('t', 0)
 ]
-print("\n🔹 First 1000 bp counts [A, C, G, T]:", first_list)
+print("\n4a. First 1000 bp counts [A, C, G, T]:", first_list)
 
 # ---------------------------------------------------
 # Step 4b: Repeat for all kilobases and store results
@@ -80,26 +80,26 @@ for kb in sorted(my_dict.keys()):
         counts.get('T', 0) + counts.get('t', 0)
     ])
 
-print("\n🔹 Total number of kilobases:", len(all_lists))
+print("\n4b. Total number of kilobases:", len(all_lists))
 
 # ---------------------------------------------------
 # Step 4c: Print nucleotide counts and sum per kilobase
 # ---------------------------------------------------
-print("\n🔹 Nucleotide counts per kilobase:")
+print("\n4c. Nucleotide counts per kilobase:")
 for i, lst in enumerate(all_lists):
-    print(f"   • Kilobase {i*1000}: A={lst[0]}, C={lst[1]}, G={lst[2]}, T={lst[3]}")
+    print(f"  • Kilobase {i*1000}: A={lst[0]}, C={lst[1]}, G={lst[2]}, T={lst[3]}")
 
 sums = [sum(lst) for lst in all_lists]
-print("\n🔹 Sums of each kilobase:")
+print("\n4d. Sums of each kilobase:")
 print("   ", sums)
 
 # ---------------------------------------------------
 # Step 5: Analyze discrepancies in kilobase sums
 # ---------------------------------------------------
-print("\n🔹 Kilobases with unexpected sums:")
+print("\n5a. Kilobases with unexpected sums:")
 for i, total in enumerate(sums):
     if total != 1000:
-        print(f"   ⚠️ Kilobase {i*1000} has unexpected sum: {total}")
+        print(f" ⚠️ Kilobase {i*1000} has unexpected sum: {total}")
 
 # ---------------------------------------------------
 # Explanation for Differences in Expected Results
