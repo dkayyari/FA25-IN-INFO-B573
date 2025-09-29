@@ -1,4 +1,4 @@
-# B573_Assignment 1
+# B573_Assignment 2
 **Name**: Deeksha Kayyari  
 **Programming Language**: Python
 **Date**: 09/28/2025
@@ -12,7 +12,7 @@ This project analyzes a DNA sequence from a FASTA file using Python. It includes
 - chr1_GL383518v1_alt.fa – FASTA file with the DNA sequence
 - Assignment2_intro_to_python.ipynb – Jupyter Notebook version (optional, for interactive use)
 ## Required packages
-- Python 3.x
+- Python Python 3.13.5
 - No external libraries needed (uses built-in Python functions)
 - Jupyter Notebook (optional, for running interactively)
 ## steps for execution
