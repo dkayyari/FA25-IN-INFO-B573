@@ -1,7 +1,8 @@
-# B573_Assignment 2
+# B573_Assignment 2  
 **Name**: Deeksha Kayyari  
-**Programming Language**: Python
-**Date**: 09/28/2025
+**Programming Language**: Python  
+**Date**:  09/28/2025
+
 
 ## Description
 
